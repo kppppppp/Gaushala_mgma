@@ -79,22 +79,22 @@
 }
 
 .hero-btn-primary {
-  background-color: #7C4D1E; /* Dark cow-dung brown */
+  background-color: #7c4d1e; /* Dark cow-dung brown */
   color: white;
 }
 
 .hero-btn-primary:hover {
-  background-color: #5c3816;
+  background-color: #5c381669;
   transform: scale(1.05);
 }
 
 .hero-btn-secondary {
-  background-color: #D4A574; /* Lighter brown */
+  background-color: #d4a674; /* Lighter brown */
   color: #000;
 }
 
 .hero-btn-secondary:hover {
-  background-color: #b98d61;
+  background-color: #b98d617a;
   transform: scale(1.05);
 }
 

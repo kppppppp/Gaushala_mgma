@@ -7,14 +7,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* NAVBAR BASE */
 .navbar {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  padding: 0 !important;
 }
+
+/* NAV LINKS */
 .nav-link {
-  font-size: 25px !important;
+  font-size: 22px !important;
   font-weight: 700 !important;
-  padding-left: 30px !important;
+  padding-left: 20px !important;
   padding-right: 12px !important;
   color: #6A3F12 !important;
 }
@@ -22,14 +24,29 @@ body {
 .nav-link:hover {
   color: #E6B010 !important;
 }
+
+/* FIX TOGGLED BUTTON POSITION */
 .navbar-toggler {
-  float: right;
-  padding: 40px;
+  padding: 6px 10px !important; /* Remove huge padding */
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-toggler-icon {
   width: 30px;
   height: 30px;
-  margin-bottom: 30px;
-  float: right;
+}
+
+/* LOGO RESIZE ON MOBILE */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 140px !important;
+    width: auto !important;
+    margin-right: 0;
+  }
+
+  .nav-link {
+    font-size: 18px !important;
+  }
 }

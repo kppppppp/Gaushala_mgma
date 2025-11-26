@@ -6,7 +6,8 @@ import logo from "./assets/logo.png";
 import { Home, Info, Images, Phone } from "lucide-react";
 function Navbar(){
     return(
- <nav className="navbar navbar-expand-lg bg-light shadow-lg">
+ <nav className="navbar navbar-expand-lg bg-light shadow-lg d-flex align-items-center">
+
       <div className="container">
 
         {/* Logo + Title */}
