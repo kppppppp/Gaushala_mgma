@@ -22,3 +22,14 @@ body {
 .nav-link:hover {
   color: #E6B010 !important;
 }
+.navbar-toggler {
+  float: right;
+  padding: 40px;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 30px;
+  float: right;
+}
