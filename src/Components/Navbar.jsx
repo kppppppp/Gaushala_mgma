@@ -44,7 +44,7 @@ function Navbar(){
 </li>
 
 <li className="nav-item">
-  <a className="nav-link d-flex align-items-center gap-2" href="#about">
+  <a className="nav-link d-flex align-items-center gap-2" href="body-container">
     <Info size={20} /> About Us
   </a>
 </li>

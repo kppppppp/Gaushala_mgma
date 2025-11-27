@@ -6,6 +6,14 @@ import './index.css'
 import Navbar from './Components/Navbar.jsx'
 import Hero from './Components/Hero.jsx'
 import Body from './Components/body.jsx'
+import Showcase from './Components/Showcase.jsx';
+import AOS from "aos";
+
+
+
+
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,8 +22,12 @@ function App() {
         <Navbar/>
         <Hero/>
         <Body/>
+        <Showcase/>
     </>
   );
 }
+
+
+
 
 export default App
