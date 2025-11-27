@@ -7,9 +7,19 @@ function Hero() {
     <div className="hero-container">
 
       {/* Background Video */}
-      <video className="hero-video" autoPlay loop muted playsInline>
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      <video
+  className="hero-video"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  controls={false}
+  disablePictureInPicture
+>
+  <source src={heroVideo} type="video/mp4" />
+</video>
+
 
       {/* Dark Overlay */}
       <div className="hero-overlay"></div>
