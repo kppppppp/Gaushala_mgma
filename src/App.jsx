@@ -8,7 +8,7 @@ import Hero from './Components/Hero.jsx'
 import Body from './Components/body.jsx'
 import Showcase from './Components/Showcase.jsx';
 import AOS from "aos";
-
+import ShelterStats from './Components/ShelterStats.jsx';
 
 
 
@@ -23,6 +23,7 @@ function App() {
         <Hero/>
         <Body/>
         <Showcase/>
+        <ShelterStats/>
     </>
   );
 }
