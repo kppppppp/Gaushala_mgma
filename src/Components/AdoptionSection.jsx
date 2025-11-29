@@ -7,12 +7,10 @@ export default function AdoptionSection() {
 
   useEffect(() => {
     const el = sectionRef.current;
-    if (!el) return;
-
     const obs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) el.classList.add("is-visible");
+        entries.forEach((e) => {
+          if (e.isIntersecting) el.classList.add("visible");
         });
       },
       { threshold: 0.25 }
@@ -23,44 +21,52 @@ export default function AdoptionSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="adopt-section">
-      <div className="container adopt-inner">
-        
-        {/* Header */}
-        <div className="adopt-top text-center">
-          <h2 className="adopt-title">How You Can Adopt?</h2>
+    <section ref={sectionRef} id="adopt" className="adopt-wrapper fade-section">
+      
+      {/* GOLD LEFT BAR */}
+      <div className="gold-bar"></div>
+
+      <div className="container adopt-container">
+
+        {/* HEADER */}
+        <div className="text-center mb-4">
+          <h2 className="adopt-title">How You Can Adopt & Support</h2>
           <p className="adopt-intro">
-            Support a rescued cattle by sponsoring its monthly or annual care —
-            including food, medical treatment, shelter upkeep, and daily
-            maintenance. Your kindness restores life and dignity.
+            Your contribution helps us feed, treat and protect rescued cattle.
+            Sponsorship ensures that every animal lives with dignity, love and care.
           </p>
         </div>
 
-        <div className="adopt-body">
+        {/* MAIN GRID */}
+        <div className="row align-items-center">
 
-          {/* Left Image */}
-          <div className="adopt-left">
-            <div className="img-card">
-              <img src={feedImg} alt="Cows grazing" className="feed-img" />
+          {/* LEFT IMAGE BLOCK */}
+          <div className="col-lg-6 col-md-6 mb-4">
+            <div className="premium-img-box">
+              <img src={feedImg} className="premium-img" alt="Cow care" />
             </div>
           </div>
 
-          {/* Right Content */}
-          <div className="adopt-right">
-            <h3 className="adopt-subtitle">We ensure:</h3>
+          {/* RIGHT CONTENT */}
+          <div className="col-lg-6 col-md-6">
+            <div className="glass-info">
 
-            <ul className="ensure-list">
-              <li>Nutritious fodder & proper feeding</li>
-              <li>Clean & hygienic shelter sheds</li>
-              <li>Continuous fresh water supply</li>
-              <li>Regular veterinary care & medicines</li>
-              <li>Daily attention from trained caretakers</li>
-            </ul>
+              <h3 className="info-title">Your Adoption Covers</h3>
 
-            <div className="cost-box">
-              <strong>Average monthly care cost per animal:</strong>
-              <span> ₹7,500</span>
-              <p>(Funded through donations and product sales)</p>
+              <ul className="gold-list">
+                <li>Nutritious fodder and healthy feeding</li>
+                <li>Clean and hygienic shelter spaces</li>
+                <li>Continuous fresh drinking water</li>
+                <li>Regular veterinary visits and medicines</li>
+                <li>Daily care from trained caretakers</li>
+              </ul>
+
+              <div className="cost-box">
+                <p><strong>Average Monthly Care Cost:</strong></p>
+                <h3 className="cost-amount">₹7,500</h3>
+                <p className="small-note">(Including food, medicine & maintenance)</p>
+              </div>
+
             </div>
           </div>
         </div>

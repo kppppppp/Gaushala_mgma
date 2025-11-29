@@ -1,135 +1,138 @@
-/* Premium Section Background */
-.adopt-section {
-  background: linear-gradient(180deg, #fff7ec 0%, #fffdf8 80%);
+/* SECTION WRAPPER */
+.adopt-wrapper {
+  position: relative;
+  background: linear-gradient(180deg, #faf5ee 0%, #fff8ec 100%);
   padding: 80px 20px;
-  color: #3c2a16;
-  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
-/* Container */
-.adopt-inner {
-  max-width: 1180px;
-  margin: 0 auto;
+/* GOLDEN SIDE BAR */
+.gold-bar {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 8px;
+  height: 85%;
+  background: linear-gradient(180deg, #d9a14c, #c38a36);
+  border-radius: 10px;
+  opacity: 0.9;
 }
 
-/* Title */
+/* SECTION TITLE */
 .adopt-title {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #5b320b;
-  letter-spacing: -0.5px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #6a3f12;
+  text-transform: uppercase;
 }
 
-/* Subtitle */
 .adopt-intro {
+  max-width: 780px;
   font-size: 17px;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #6b5038;
+  color: #695136;
   line-height: 1.7;
+  margin: 10px auto;
 }
 
-/* Grid Layout */
-.adopt-body {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 45px;
-  align-items: center;
-}
-
-/* Image Card */
-.img-card {
+/* IMAGE CARD */
+.premium-img-box {
   background: #ffffff;
-  border-radius: 18px;
   padding: 14px;
-  box-shadow: 0 14px 40px rgba(150, 110, 50, 0.15);
-  transition: transform 0.3s ease;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(160, 110, 50, 0.18);
 }
 
-.img-card:hover {
-  transform: translateY(-6px);
-}
-
-.feed-img {
+.premium-img {
   width: 100%;
   height: 340px;
-  border-radius: 14px;
+  border-radius: 16px;
   object-fit: cover;
+  transition: 0.3s ease;
 }
 
-/* Right section text */
-.adopt-subtitle {
+.premium-img:hover {
+  transform: scale(1.02);
+}
+
+/* GLASS INFO BOX */
+.glass-info {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px 22px;
+  border-radius: 16px;
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(160, 120, 50, 0.15);
+  box-shadow: 0px 10px 22px rgba(0,0,0,0.10);
+}
+
+.info-title {
   font-size: 24px;
   font-weight: 700;
   color: #5a3815;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-.ensure-list {
+/* GOLD LIST */
+.gold-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 24px;
+  margin: 0 0 18px;
 }
 
-.ensure-list li {
-  font-size: 17px;
-  margin-bottom: 14px;
-  padding-left: 32px;
+.gold-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #4b351b;
+  padding-left: 28px;
   position: relative;
-  color: #4b3419;
-  font-weight: 500;
 }
 
-/* Custom golden icon */
-.ensure-list li::before {
+.gold-list li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 1px;
-  font-size: 16px;
-  color: #d29a38;
+  top: 0;
+  font-size: 17px;
   font-weight: bold;
+  color: #c89236;
 }
 
-/* Cost Box */
+/* COST BOX */
 .cost-box {
-  background: #fff8e9;
-  border: 1px solid rgba(210, 150, 60, 0.25);
-  padding: 18px 20px;
+  background: #fff4dd;
+  padding: 18px;
   border-radius: 12px;
-  font-size: 16px;
-  box-shadow: 0 10px 25px rgba(180, 120, 20, 0.08);
+  border: 1px solid rgba(210, 150, 60, 0.25);
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(180, 120, 20, 0.10);
 }
 
-.cost-box span {
-  font-size: 20px;
-  font-weight: 700;
-  color: #b4781c;
+.cost-amount {
+  font-size: 28px;
+  color: #b97a22;
+  font-weight: 800;
+  margin: 4px 0;
 }
 
-/* Responsive */
+.small-note {
+  font-size: 14px;
+  color: #6d583f;
+}
+
+/* REVEAL ANIMATION */
+.fade-section {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.9s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
 @media (max-width: 900px) {
-
-  .adopt-body {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .feed-img {
+  .premium-img {
     height: 260px;
   }
-}
-
-/* Reveal Animation */
-.adopt-section:not(.is-visible) .adopt-inner {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 700ms ease;
-}
-
-.adopt-section.is-visible .adopt-inner {
-  opacity: 1;
-  transform: none;
 }

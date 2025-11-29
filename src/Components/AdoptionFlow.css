@@ -1,59 +1,133 @@
-/* ------------------------------------------------------
-   GLOBAL SECTION
--------------------------------------------------------*/
-.adopt-flow {
-  width: 100%;
-  padding: 40px 20px;
-  background: #faf7f0;
+/* -------------------------------
+   GLOBAL ADOPTION SECTION
+--------------------------------*/
+.adopt-wrapper {
+  padding: 70px 20px;
+  background: #fffaf2;
   font-family: "Poppins", sans-serif;
 }
 
 .adopt-title {
   text-align: center;
   font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 25px;
+  font-weight: 800;
   color: #6A3F12;
+  margin-bottom: 25px;
 }
 
-/* ------------------------------------------------------
-   CAROUSEL
--------------------------------------------------------*/
+.gold-dot {
+  color: #c58a26;
+}
+
+/* -------------------------------
+   FILTER BAR
+--------------------------------*/
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #d3b88c;
+  background: #fff9ef;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #5c3a12;
+}
+
+.filter-btn.active {
+  background: linear-gradient(45deg, #c58a26, #f2d29b);
+  color: #4a2b08;
+  border-color: #c09136;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* -------------------------------
+   CAROUSEL WRAPPER
+--------------------------------*/
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.slider-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-size: 24px;
+  color: #5c3a12;
+  transition: 0.2s;
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+}
+
+.slider-btn.left { margin-left: 4px; }
+.slider-btn.right { margin-right: 4px; }
+
+/* -------------------------------
+   EMBLA STYLES
+--------------------------------*/
 .embla {
   overflow: hidden;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 .embla__container {
   display: flex;
+  gap: 20px;
 }
 
 .embla__slide {
-  flex: 0 0 80%;
-  margin-right: 20px;
+  flex: 0 0 320px;
 }
 
 @media (min-width: 768px) {
   .embla__slide {
-    flex: 0 0 33%;
+    flex: 0 0 31%;
   }
 }
 
-/* ------------------------------------------------------
-   COW CARD
--------------------------------------------------------*/
+@media (max-width: 500px) {
+  .embla__slide {
+    flex: 0 0 85%;
+  }
+}
+
+/* -------------------------------
+   CATTLE CARDS
+--------------------------------*/
 .cow-card {
   background: white;
   border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid #e8d9b8;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .cow-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
 }
 
 .cow-img {
@@ -63,160 +137,162 @@
 }
 
 .cow-body {
-  padding: 18px;
+  padding: 16px;
+  text-align: center;
 }
 
 .cow-body h3 {
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4a2b0f;
 }
 
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 15px;
+.meta {
+  font-size: 14px;
+  color: #7c6a58;
 }
 
-.btn-group button {
-  padding: 10px;
-  border-radius: 10px;
+/* Buttons */
+.gold-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
   border: none;
-  font-size: 16px;
-  font-weight: 600;
-  background: #F1C65D;
-  color: #4a320e;
+  font-weight: 700;
+  background: linear-gradient(45deg, #c8922d, #f0d7a6);
+  color: #4b320e;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
-.btn-group button:hover {
-  background: #e0b045;
+.gold-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* ------------------------------------------------------
-   CART BOX
--------------------------------------------------------*/
-.cart-box {
-  margin-top: 50px;
-  background: rgba(255,255,255,0.9);
+.gold-btn.alt {
+  background: #fff1d6;
+}
+
+/* -------------------------------
+   CART SECTION
+--------------------------------*/
+.cart-area {
+  margin-top: 40px;
   padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
-  backdrop-filter: blur(8px);
+  background: #fffdf7;
+  border-radius: 18px;
+  border: 1px solid #ead9b5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.cart-item {
+.cart-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #6A3F12;
+}
+
+.cart-row {
   display: flex;
+  gap: 18px;
+  margin: 20px 0;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
 }
 
 .cart-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 14px;
   object-fit: cover;
 }
 
-/* ------------------------------------------------------
+/* Cart text */
+.cart-amount span {
+  color: #c58a26;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* -------------------------------
    FORM
--------------------------------------------------------*/
+--------------------------------*/
 .adopt-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 .adopt-form input {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1.5px solid #d8c7a4;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e1d4b4;
   font-size: 16px;
 }
 
-.submit-btn {
-  margin-top: 10px;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: #6A3F12;
-  color: white;
-  font-weight: 600;
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.3s;
+/* -------------------------------
+   PAYMENT BOXES
+--------------------------------*/
+.payment-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
-.submit-btn:hover {
-  background: #55320E;
+@media (max-width: 650px) {
+  .payment-section {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* ------------------------------------------------------
-   QR + BANK BOXES
--------------------------------------------------------*/
 .qr-box,
 .bank-box {
-  margin-top: 25px;
-  padding: 18px;
-  background: #fff7e6;
-  border: 2px solid #f1dab0;
-  border-radius: 15px;
+  background: #fff7e0;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #e6d3a0;
+  text-align: center;
 }
 
 .qr-img {
-  width: 180px;
-  margin: 15px auto;
-  display: block;
-  border-radius: 10px;
+  width: 160px;
+  margin: 10px auto;
+  border-radius: 12px;
 }
 
-.bank-box h4 {
-  margin-bottom: 8px;
-  font-size: 20px;
+/* -------------------------------
+   SUBMIT BUTTON
+--------------------------------*/
+.submit-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #6A3F12;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.bank-details {
-  margin-top: 12px;
+.submit-btn:hover {
+  background: #4b2a0b;
 }
 
-.bank-details .row {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0;
-}
-
-.label {
-  font-weight: 600;
-  color: #4b3611;
-}
-
-.value {
-  color: #75531b;
-}
-
-/* ------------------------------------------------------
-   File Upload
--------------------------------------------------------*/
-.upload-box label {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/* ------------------------------------------------------
-   SUCCESS POPUP
--------------------------------------------------------*/
-.success-popup {
-  margin-top: 40px;
+/* -------------------------------
+   SUCCESS BOX
+--------------------------------*/
+.success-box {
+  margin-top: 30px;
   background: white;
   padding: 30px;
-  border-radius: 18px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.success-popup h2 {
+.success-box h3 {
+  font-size: 24px;
   color: #6A3F12;
-  margin-bottom: 10px;
+  font-weight: 800;
 }

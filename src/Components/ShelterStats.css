@@ -1,131 +1,158 @@
-.shelter-section {
-  border-radius: 14px;
-  padding: 50px 30px;
+/* PAGE BACKGROUND MATCHING WHO WE ARE SECTION */
+.shelter-wrapper {
+  position: relative;
+  background: linear-gradient(180deg, #faf5ee 0%, #fff8ec 100%);
+  padding: 70px 0;
+  overflow: hidden;
 }
 
+/* GOLD DECORATIVE LINE */
+.gold-left {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 8px;
+  height: 85%;
+  background: linear-gradient(180deg, #d9a14c, #c38a36);
+  border-radius: 12px;
+  opacity: 0.9;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 28px 26px;
+  border-radius: 16px;
+  border: 1px solid rgba(150, 110, 50, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* TITLES */
 .shelter-title {
   font-size: 32px;
-  font-weight: 700;
-  color: #6A3F12;
-  margin-bottom: 25px;
+  font-weight: 800;
+  color: #6a3f12;
 }
 
-/* List */
+.shelter-subtext {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #8b6a3c;
+}
+
+/* COUNTER LIST */
 .shelter-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 22px 0;
 }
 
 .shelter-list li {
   font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 14px;
-  color: #4a3418;
+  font-weight: 700;
   display: flex;
   align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #4a3418;
 }
+
+/* COUNTER STYLE */
 .count {
+  font-size: 40px;
+  font-weight: 800;
   background: linear-gradient(45deg, #c58a26, #f2d29b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  min-width: 70px;
 }
 
-.count {
-  margin-right: 14px;
-  font-size: 38px;
-  color: #c78a2a;
-  font-weight: 800;
-}
-
-/* Image Grid */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.grid-img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
-}
-
-.grid-img:hover {
-  transform: scale(1.03);
-}
-
-.image-grid img:nth-child(3) {
-  grid-column: span 2;
-  height: 200px;
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .shelter-title {
-    text-align: center;
-    font-size: 26px;
-  }
-
-  .count {
-    font-size: 32px;
-    margin-right: 10px;
-  }
-
-  .shelter-list li {
-    justify-content: center;
-  }
-
-  .image-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .image-grid img:nth-child(3) {
-    grid-column: span 1;
-    height: 180px;
-  }
-}
-.shelter-subtext {
-  font-size: 16px;
-  color: #8b6a3c;
-  margin-bottom: 25px;
-}
-
+/* DESCRIPTION */
 .desc-text {
   font-size: 15px;
-  color: #5a4828;
-  margin-top: 25px;
-  line-height: 1.5;
-  max-width: 90%;
+  margin-top: 15px;
+  color: #5b4526;
+  line-height: 1.6;
 }
 
+/* BUTTON */
 .support-btn {
-  margin-top: 18px;
-  align-items: center;
-  justify-self: center;
+  margin-top: 22px;
   background: linear-gradient(45deg, #c58a26, #f2d29b);
   border: none;
-  padding: 12px 24px;
-  color: #4e2f02;
-  font-size: 16px;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-size: 17px;
   font-weight: 700;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #4e2f02;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.18);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .support-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* Premium gold text for counters */
-.count {
-  background: linear-gradient(45deg, #c58a26, #f2d29b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+}
+
+.grid-img:hover {
+  transform: scale(1.04);
+}
+
+/* Full width bottom image */
+.grid-img.full {
+  grid-column: span 2;
+  height: 220px;
+}
+
+/* SCROLL FADE ANIMATION */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE FIX */
+@media (max-width: 576px) {
+
+  .glass-card {
+    text-align: center;
+  }
+
+  .shelter-title {
+    font-size: 26px;
+  }
+
+  .grid-img {
+    height: 150px;
+  }
+
+  .grid-img.full {
+    height: 170px;
+  }
+
+  .shelter-list li {
+    justify-content: center;
+  }
 }

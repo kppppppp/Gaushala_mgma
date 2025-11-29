@@ -1,53 +1,79 @@
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useRef } from 'react';
 import "./body.css";
 import cows from "./assets/cows.jpg";
 
 function Body() {
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            el.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="body-container">
+    <section className="body-container fade-section" ref={sectionRef} id="about">
 
-      {/* Golden Side Accent */}
-      <div className="left-accent"></div>
+      {/* Golden Vertical Accent */}
+      <div className="gold-accent"></div>
 
-      {/* Heading */}
+      {/* Title */}
       <div className="row justify-content-center text-center mb-5">
         <div className="col-12">
-          <h1 className="section-title" data-aos="fade-down">
+          <h1 className="section-title">
             Who We Are
           </h1>
-          <div className="title-underline" data-aos="zoom-in"></div>
+
+          <div className="title-underline"></div>
         </div>
       </div>
 
-      {/* Content */}
+      {/* Main Content */}
       <div className="row align-items-center justify-content-center main-content">
 
-        {/* Left Section */}
-        <div
-          className="col-lg-7 col-md-10 col-12 text-section"
-          data-aos="fade-right"
-        >
-          <h2>Mazi Mauli Gomay Ashray, Tanger</h2>
+        {/* Text */}
+        <div className="col-lg-7 col-md-11 col-12 text-section">
+          <div className="text-glass">
+            <h2>Mazi Mauli Gomay Ashray, Tanger</h2>
 
-          <p>
-            Mazi Mauli Gomay Ashray is a certified and registered Goshala (Cow Sentry),
-            located in Village Tanger of Dapoli Taluka, District Ratnagiri.  
-            Our mission is to protect, nurture and serve cows with devotion.
-          </p>
+            <p>
+              Mazi Mauli Gomay Ashray is a certified and registered Goshala (Cow Sanctuary),
+              located in Village Tanger of Dapoli Taluka, District Ratnagiri.
+            </p>
+
+            <p>
+              Our seva is rooted in compassion — we rescue, feed, heal, and protect abandoned,
+              injured, and old cows with dignity and devotion.
+            </p>
+
+            <p>
+              With your support, we continue our mission of preserving the spiritual and cultural
+              heritage of Indian cattle.
+            </p>
+          </div>
         </div>
 
-        {/* Right Image */}
-        <div
-          className="col-lg-4 col-md-10 col-12 text-center mt-4 mt-lg-0"
-          data-aos="fade-left"
-        >
+        {/* Image */}
+        <div className="col-lg-4 col-md-10 col-12 mt-4 mt-lg-0 text-center">
           <img src={cows} alt="Cows" className="who-img premium-shadow" />
         </div>
 
       </div>
 
-    </div>
+    </section>
   );
 }
 

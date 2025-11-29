@@ -1,46 +1,82 @@
+/* SECTION BASE */
 .showcase-section {
-  background-color: #fff;
+  position: relative;
+  background: #fffdf7;
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-/* Title */
+/* GOLD SIDE ACCENT */
+.gold-accent-side {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 8px;
+  height: 85%;
+  background: linear-gradient(180deg, #d9a14c, #c38a36);
+  border-radius: 12px;
+  opacity: 0.85;
+}
+
+/* TITLE */
 .showcase-title {
   font-size: 32px;
-  font-weight: 700;
-  color: #6A3F12;
+  font-weight: 800;
+  color: #7c4d1e;
+  letter-spacing: 0.5px;
 }
 
-/* UNIFORM IMAGE WRAPPER */
-.cert-box {
-  width: 150px;
-  height: 150px;
-  background: #fff;
-  border: 2px solid #eee;
-  border-radius: 15px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.showcase-sub {
+  font-size: 16px;
+  color: #5c4a30;
+  margin-top: 6px;
+}
+
+/* CERTIFICATE FRAME */
+.cert-frame {
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(140, 90, 40, 0.15);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
   margin: 0 auto;
+}
+
+.cert-frame:hover {
+  transform: translateY(-4px);
 }
 
 .cert-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.cert-img:hover {
-  transform: scale(1.07);
-}
-
-/* Label */
+/* CERT LABEL */
 .cert-label {
+  margin-top: 8px;
   font-weight: 600;
   font-size: 14px;
-  margin-top: 8px;
   color: #6A3F12;
+}
+
+/* TRUST BOX */
+.trust-box {
+  background: rgba(255, 243, 214, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(150, 100, 50, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.trust-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5c3a15;
+  margin-bottom: 12px;
 }
 
 /* Tick List */
@@ -51,35 +87,51 @@
 }
 
 .tick-list li {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+  color: #3b2a13;
   margin-bottom: 12px;
-  color: #3d2a11;
   display: flex;
   align-items: center;
 }
 
 .tick-list li::before {
   content: "✔";
-  color: green;
+  color: #38a13a;
   font-weight: bold;
   margin-right: 8px;
 }
 
-/* Mobile Responsive */
+/* Fade Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.9s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
 @media (max-width: 576px) {
   .showcase-title {
     text-align: center;
     font-size: 26px;
   }
 
-  .cert-box {
+  .cert-frame {
     width: 120px;
     height: 120px;
   }
 
+  .trust-box {
+    margin-top: 20px;
+    text-align: center;
+  }
+
   .tick-list li {
     justify-content: center;
-    text-align: center;
   }
 }
