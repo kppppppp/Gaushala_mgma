@@ -9,7 +9,8 @@ import Body from './Components/body.jsx'
 import Showcase from './Components/Showcase.jsx';
 import AOS from "aos";
 import ShelterStats from './Components/ShelterStats.jsx';
-
+import AdoptionSection from './Components/AdoptionSection.jsx';
+import AdoptionCarousel from './Components/AdoptionCarousel.jsx';
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Body/>
         <Showcase/>
         <ShelterStats/>
+        <AdoptionSection/>
+        <AdoptionCarousel/>
     </>
   );
 }

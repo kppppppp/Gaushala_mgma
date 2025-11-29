@@ -1,0 +1,101 @@
+.adopt-wrapper {
+  width: 100%;
+  padding: 40px 8vw;
+}
+
+.adopt-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #2a2a2a;
+}
+
+.embla { overflow: hidden; }
+.embla__container { display: flex; gap: 25px; }
+
+.embla__slide {
+  flex: 0 0 25%;
+}
+
+@media (max-width: 1200px) { .embla__slide { flex: 0 0 33%; } }
+@media (max-width: 900px)  { .embla__slide { flex: 0 0 50%; } }
+@media (max-width: 600px)  { .embla__slide { flex: 0 0 100%; } }
+
+.adopt-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.65);
+  padding-bottom: 20px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.35s;
+}
+
+.adopt-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+}
+
+.adopt-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.adopt-content {
+  padding: 20px;
+}
+
+.cow-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.price-box {
+  background: #f5c242;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+/* Buttons */
+.adopt-btn,
+.adopt-btn-secondary,
+.adopt-btn-custom {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.adopt-btn {
+  background: #f5c242;
+}
+.adopt-btn:hover {
+  background: #e4b130;
+}
+
+.adopt-btn-secondary {
+  background: #ffffff;
+  border: 1.5px solid #f5c242;
+}
+.adopt-btn-secondary:hover {
+  background: #fff8df;
+}
+
+.adopt-btn-custom {
+  background: #ffebe2;
+  border: 1.5px solid #ffbda6;
+}
+.adopt-btn-custom:hover {
+  background: #ffd6c8;
+}

@@ -1,0 +1,135 @@
+/* Premium Section Background */
+.adopt-section {
+  background: linear-gradient(180deg, #fff7ec 0%, #fffdf8 80%);
+  padding: 80px 20px;
+  color: #3c2a16;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.adopt-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Title */
+.adopt-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #5b320b;
+  letter-spacing: -0.5px;
+}
+
+/* Subtitle */
+.adopt-intro {
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #6b5038;
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.adopt-body {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+/* Image Card */
+.img-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 14px 40px rgba(150, 110, 50, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.img-card:hover {
+  transform: translateY(-6px);
+}
+
+.feed-img {
+  width: 100%;
+  height: 340px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Right section text */
+.adopt-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5a3815;
+  margin-bottom: 16px;
+}
+
+.ensure-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.ensure-list li {
+  font-size: 17px;
+  margin-bottom: 14px;
+  padding-left: 32px;
+  position: relative;
+  color: #4b3419;
+  font-weight: 500;
+}
+
+/* Custom golden icon */
+.ensure-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 16px;
+  color: #d29a38;
+  font-weight: bold;
+}
+
+/* Cost Box */
+.cost-box {
+  background: #fff8e9;
+  border: 1px solid rgba(210, 150, 60, 0.25);
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(180, 120, 20, 0.08);
+}
+
+.cost-box span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #b4781c;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+  .adopt-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .feed-img {
+    height: 260px;
+  }
+}
+
+/* Reveal Animation */
+.adopt-section:not(.is-visible) .adopt-inner {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 700ms ease;
+}
+
+.adopt-section.is-visible .adopt-inner {
+  opacity: 1;
+  transform: none;
+}
