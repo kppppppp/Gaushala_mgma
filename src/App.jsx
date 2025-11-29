@@ -11,7 +11,7 @@ import AOS from "aos";
 import ShelterStats from './Components/ShelterStats.jsx';
 import AdoptionSection from './Components/AdoptionSection.jsx';
 import AdoptionCarousel from './Components/AdoptionCarousel.jsx';
-
+import AdoptionFlow from './Components/AdoptionFlow.jsx';
 
 
 
@@ -26,7 +26,9 @@ function App() {
         <Showcase/>
         <ShelterStats/>
         <AdoptionSection/>
-        <AdoptionCarousel/>
+
+      
+        <AdoptionFlow/>
     </>
   );
 }

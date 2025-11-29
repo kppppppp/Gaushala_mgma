@@ -30,33 +30,20 @@ const cattle = [
 ];
 
 export default function AdoptionFlow() {
-  const [emblaRef] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    dragFree: true
-  });
-
+  const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true });
   const [cart, setCart] = useState(null);
   const [paymentSS, setPaymentSS] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  // ---------------- HANDLE ADD TO CART ----------------
   const handleAddToCart = (cow, priceType) => {
     let amount = cow.price;
     if (priceType === "yearly") amount = cow.price * 12;
     if (priceType === "custom") amount = 500;
 
     setCart({ ...cow, selectedAmount: amount });
-
-    // Scroll to form section
-    setTimeout(() => {
-      const formSection = document.getElementById("adopt-form-section");
-      if (formSection)
-        formSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 300);
+    window.scrollTo({ top: 600, behavior: "smooth" });
   };
 
-  // ---------------- FORM SUBMIT ----------------
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -104,9 +91,9 @@ export default function AdoptionFlow() {
         </div>
       </div>
 
-      {/* ---------------- CART + PAYMENT FORM ---------------- */}
+      {/* CART SECTION */}
       {cart && !submitted && (
-        <div id="adopt-form-section" className="cart-box">
+        <div className="cart-box">
           <h2>Adoption Cart</h2>
 
           <div className="cart-item">
@@ -125,51 +112,14 @@ export default function AdoptionFlow() {
             <input placeholder="Phone Number" required />
             <input placeholder="City" required />
 
-            {/* ---------------- QR PAYMENT ---------------- */}
+            {/* QR SCANNER */}
             <div className="qr-box">
-              <h3>Scan & Pay (UPI)</h3>
+              <h3>Scan & Pay</h3>
               <img src="/assets/gpay-qr.png" className="qr-img" />
               <p>UPI ID: <b>yourupi@oksbi</b></p>
             </div>
 
-            {/* ---------------- BANK TRANSFER ---------------- */}
-            <div className="bank-box">
-              <h4>Bank Transfer (IMPS / NEFT / RTGS)</h4>
-              <p className="bank-desc">
-                Prefer paying via bank? Use these details and upload the screenshot after transfer.
-              </p>
-
-              <div className="bank-details">
-
-                <div className="row">
-                  <span className="label">Account Name:</span>
-                  <span className="value">Mazi Guru Mauli Gomay Ashray</span>
-                </div>
-
-                <div className="row">
-                  <span className="label">Account Number:</span>
-                  <span className="value">123456789012</span>
-                </div>
-
-                <div className="row">
-                  <span className="label">Bank Name:</span>
-                  <span className="value">State Bank of India</span>
-                </div>
-
-                <div className="row">
-                  <span className="label">IFSC Code:</span>
-                  <span className="value">SBIN0001234</span>
-                </div>
-
-                <div className="row">
-                  <span className="label">Branch:</span>
-                  <span className="value">Dapoli (Ratnagiri)</span>
-                </div>
-
-              </div>
-            </div>
-
-            {/* ---------------- PAYMENT SCREENSHOT ---------------- */}
+            {/* PAYMENT SCREENSHOT */}
             <div className="upload-box">
               <label>Upload Payment Screenshot</label>
               <input
@@ -185,12 +135,12 @@ export default function AdoptionFlow() {
         </div>
       )}
 
-      {/* ---------------- SUCCESS POPUP ---------------- */}
+      {/* SUCCESS POPUP */}
       {submitted && (
         <div className="success-popup">
           <h2>🎉 Thank You for Adopting!</h2>
           <p>Your adoption is recorded.  
-          A confirmation and digital certificate will be emailed shortly.</p>
+          A confirmation and certificate will be emailed.</p>
         </div>
       )}
 

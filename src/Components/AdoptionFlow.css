@@ -1,0 +1,222 @@
+/* ------------------------------------------------------
+   GLOBAL SECTION
+-------------------------------------------------------*/
+.adopt-flow {
+  width: 100%;
+  padding: 40px 20px;
+  background: #faf7f0;
+  font-family: "Poppins", sans-serif;
+}
+
+.adopt-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #6A3F12;
+}
+
+/* ------------------------------------------------------
+   CAROUSEL
+-------------------------------------------------------*/
+.embla {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 80%;
+  margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 33%;
+  }
+}
+
+/* ------------------------------------------------------
+   COW CARD
+-------------------------------------------------------*/
+.cow-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.cow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+}
+
+.cow-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cow-body {
+  padding: 18px;
+}
+
+.cow-body h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-group button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: #F1C65D;
+  color: #4a320e;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-group button:hover {
+  background: #e0b045;
+}
+
+/* ------------------------------------------------------
+   CART BOX
+-------------------------------------------------------*/
+.cart-box {
+  margin-top: 50px;
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cart-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------
+   FORM
+-------------------------------------------------------*/
+.adopt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.adopt-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d8c7a4;
+  font-size: 16px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #6A3F12;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #55320E;
+}
+
+/* ------------------------------------------------------
+   QR + BANK BOXES
+-------------------------------------------------------*/
+.qr-box,
+.bank-box {
+  margin-top: 25px;
+  padding: 18px;
+  background: #fff7e6;
+  border: 2px solid #f1dab0;
+  border-radius: 15px;
+}
+
+.qr-img {
+  width: 180px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.bank-box h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.bank-details {
+  margin-top: 12px;
+}
+
+.bank-details .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #4b3611;
+}
+
+.value {
+  color: #75531b;
+}
+
+/* ------------------------------------------------------
+   File Upload
+-------------------------------------------------------*/
+.upload-box label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------
+   SUCCESS POPUP
+-------------------------------------------------------*/
+.success-popup {
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.success-popup h2 {
+  color: #6A3F12;
+  margin-bottom: 10px;
+}
