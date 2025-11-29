@@ -1,0 +1,103 @@
+/* ------------------------------
+   SECTION WRAPPER
+--------------------------------*/
+.products-section {
+  background: #fff9ef;
+  padding: 70px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #4a3213;
+}
+
+.products-inner {
+  max-width: 1150px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ------------------------------
+   TITLE
+--------------------------------*/
+.products-title {
+  font-size: 34px;
+  color: #6a3f12;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.products-subtitle {
+  max-width: 820px;
+  margin: 12px auto 40px;
+  font-size: 17px;
+  color: #6e5840;
+  line-height: 1.7;
+}
+
+/* ------------------------------
+   GRID
+--------------------------------*/
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------
+   BOXES
+--------------------------------*/
+.product-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  border: 1px solid #ecd7b5;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: 0.25s ease;
+}
+
+.product-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+/* ------------------------------
+   HEADINGS
+--------------------------------*/
+.product-heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #5a3815;
+}
+
+/* ------------------------------
+   LIST
+--------------------------------*/
+.product-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  color: #4a3213;
+}
+
+/* gold tick icon */
+.product-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c58a26;
+  font-weight: bold;
+}

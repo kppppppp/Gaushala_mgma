@@ -1,0 +1,70 @@
+.trustees-section {
+  padding: 70px 20px;
+  background: #fffaf2;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.trustees-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #6a3f12;
+  margin-bottom: 40px;
+}
+
+.trustees-embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.trustees-container {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+}
+
+.trustee-card {
+  flex: 0 0 280px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #f3e2c3;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  padding-bottom: 18px;
+  transition: 0.3s ease;
+}
+
+.trustee-card:hover {
+  transform: translateY(-6px);
+}
+
+.trustee-image-wrap {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.trustee-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trustee-info h3 {
+  font-size: 18px;
+  margin-top: 12px;
+  color: #4a320e;
+  font-weight: 700;
+}
+
+.trustee-info p {
+  font-size: 14px;
+  color: #7a6a5b;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .trustee-card {
+    flex: 0 0 85%;
+  }
+}
